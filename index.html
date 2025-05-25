@@ -17,6 +17,7 @@
             <h1 id="b">Kawasaki Ninja 400</h1>
             <p id="b">Price: 215,000 Baht</p>
             <a href="ninja400.html"><button class="btn">Details</button></a>
+            <button id="likeBtn" class="like-button">🤍</button>
         </div>
         <!-- มอไซค์คันที่สอง -->
         <div class="cbr500r">
@@ -24,6 +25,7 @@
             <h1 id="b">Honda CBR500r</h1>
             <p id="b">Price: 222,800 Baht</p>
             <a href="cbr500r.html"><button class="btn">Details</button></a>
+            <button id="likeBtn" class="like-button">🤍</button>
         </div>
         <!-- มอไซค์คันที่สาม -->
         <div class="yzf-r7">
@@ -31,6 +33,7 @@
             <h1 id="b">Yamaha YZF-R7</h1>
             <p id="b">Price: 339,000 Baht</p>
             <a href="yzf-r7.html"><button class="btn">Details</button></a>
+            <button id="likeBtn" class="like-button">🤍</button>
         </div>
         <!-- มอไซค์คันที่สี่ -->
         <div class="mt-07">
@@ -38,6 +41,17 @@
             <h1 id="b">Yamaha MT-07</h1>
             <p id="b">Price: 305,000 Baht</p>
             <a href="mt-07.html"><button class="btn">Details</button></a>
+            <button id="likeBtn" class="like-button">🤍</button>
         </div>
+        <script>
+            const likeButtons = document.querySelectorAll(".like-button");
+
+            likeButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    this.classList.toggle("liked");
+                    this.textContent = this.classList.contains("liked") ? "❤️" : "🤍";
+                });
+            });
+        </script>
     </body>
 </html>
